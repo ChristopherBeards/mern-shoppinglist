@@ -1,0 +1,30 @@
+{
+  "name": "mern-shoppinglist",
+  "version": "1.0.0",
+  "description": "Shopping list built with the MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "cd .. && cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd .. && cd client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherBeards/mern-shoppinglist.git"
+  },
+  "author": "Christopher Beards",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChristopherBeards/mern-shoppinglist/issues"
+  },
+  "homepage": "https://github.com/ChristopherBeards/mern-shoppinglist#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.6.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.7"
+  }
+}
